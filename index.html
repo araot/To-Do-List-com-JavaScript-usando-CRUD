@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- SweetAlert2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.0/dist/sweetalert2.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="todo-container">
+    <h1>📋 Minha To-Do List</h1>
+
+    <!-- Barra de pesquisa -->
+    <input type="text" id="search-input" placeholder="Pesquisar tarefa..." class="search-input" />
+
+    <!-- Formulário para adicionar nova tarefa -->
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Digite uma tarefa..." />
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <!-- Lista de Tarefas -->
+    <ul id="todo-list"></ul>
+  </div>
+
+  <!-- SweetAlert2 Script -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.0/dist/sweetalert2.all.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

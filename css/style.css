@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .todo-container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 1.8rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .search-input:focus {
+    border-color: #007bff;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  form input {
+    flex: 1 1 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  form input:focus {
+    border-color: #28a745;
+  }
+  
+  form button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #218838;
+  }
+  
+  ul#todo-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background: #f1f1f1;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    transition: background 0.3s ease;
+  }
+  
+  ul li.done {
+    text-decoration: line-through;
+    color: #999;
+    background: #e2e2e2;
+  }
+  
+  ul li span {
+    flex: 1 1 auto;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  ul li .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  ul li .actions button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .complete-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .todo-container {
+      padding: 15px;
+    }
+  
+    form {
+      flex-direction: column;
+    }
+  
+    form input,
+    form button {
+      width: 100%;
+    }
+  
+    ul li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    ul li span {
+      margin-bottom: 10px;
+    }
+  
+    ul li .actions {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .search-input {
+      font-size: 0.95rem;
+    }
+  }
+  
+  
